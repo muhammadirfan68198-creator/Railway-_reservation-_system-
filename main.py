@@ -11,3 +11,6 @@ while True:
     print("5. Exit")
 
     choice = input("Enter your choice: ")
+           
+        if choice == "1":
+          print("Available seats:", seats)
