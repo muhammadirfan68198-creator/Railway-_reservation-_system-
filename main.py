@@ -26,11 +26,19 @@ while True:
 
             booking_id += 1
             seats -= 1
-        else:
-            print("No seats available!")
-elif choice == "3":
+           else:
+             print("No seats available!")
+        elif choice == "3":
         bid = int(input("Enter booking ID: "))
-        if bid in bookings:
+         if bid in bookings:
             print("Booking Details:", bookings[bid])
-        else:
+         else:
             print("Booking not found!")
+        elif choice == "4":
+        bid = int(input("Enter booking ID to cancel: "))
+         if bid in bookings:
+            del bookings[bid]
+            seats += 1
+            print("Booking cancelled successfully!")
+         else:
+            print("Invalid booking ID!")
