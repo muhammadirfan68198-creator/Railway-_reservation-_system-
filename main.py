@@ -13,4 +13,18 @@ while True:
     choice = input("Enter your choice: ")
            
         if choice == "1":
-          print("Available seats:", seats)
+         print("Available seats:", seats)
+        elif choice == "2":
+           if seats > 0:
+            name = input("Enter name: ")
+            age = input("Enter age: ")
+
+            bookings[booking_id] = {"name": name, "age": age}
+
+            print("Booking successful!")
+            print("Your booking ID is:", booking_id)
+
+            booking_id += 1
+            seats -= 1
+        else:
+            print("No seats available!")
