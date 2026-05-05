@@ -1,4 +1,4 @@
-seats = 50
+koseats = 50
 bookings = {}
 booking_id = 1
 
@@ -28,3 +28,9 @@ while True:
             seats -= 1
         else:
             print("No seats available!")
+elif choice == "3":
+        bid = int(input("Enter booking ID: "))
+        if bid in bookings:
+            print("Booking Details:", bookings[bid])
+        else:
+            print("Booking not found!")
